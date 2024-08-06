@@ -1,0 +1,51 @@
+{
+  "name": "youtube-opinions-market",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "youtube-opinions-market",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/youtube-opinions-market"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "youtube-opinions-market"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "youtube-opinions-market:build",
+        "dev": true,
+        "port": 3000
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "youtube-opinions-market:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "youtube-opinions-market:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "youtube-opinions-market:build:production"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
