@@ -47,7 +47,7 @@ export function AccountBalanceCheck({ address }: { address: PublicKey }) {
   }
   if (query.isError || !query.data) {
     return (
-      <div className="alert alert-warning text-warning-content/80 rounded-none flex justify-center">
+      <div className="alert alert-warning text-warning-content/80 rounded-none flex justify-center bg-">
         <span>
           You are connected to <strong>{cluster.name}</strong> but your account
           is not found on this cluster.
