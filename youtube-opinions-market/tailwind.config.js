@@ -90,10 +90,8 @@ module.exports = {
         '5xl': '4.210rem',
       },
       fontFamily: {
-        heading1: ['var(--font-yusei)'],
-        body1: ['var(--font-yusei)'],
-        heading2: 'Zain',
-        body2: 'Zain',
+        heading: ['var(--font-yusei)'],
+        body: ['var(--font-yusei)'],
       },
       fontWeight: {
         normal: '400',

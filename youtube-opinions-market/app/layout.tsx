@@ -6,10 +6,7 @@ import {
   WalletButton,
 } from '@/components/solana/solana-provider';
 import { ReactQueryProvider } from './react-query-provider';
-import Leaderboard from '@/components/leaderboard_dashboard/leaderboard-ui';
-import Window from '@/components/leaderboard_dashboard/window';
 import { Yusei_Magic } from 'next/font/google';
-import { ClusterUiSelect } from '@/components/cluster/cluster-ui';
 
 const yusei = Yusei_Magic({
   weight: '400',
@@ -37,11 +34,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${yusei.variable}`}>
       <body>
-        <ClusterProvider>
-          <SolanaProvider>
-            <Window />
-          </SolanaProvider>
-        </ClusterProvider>
+        <div>
+          <ReactQueryProvider>
+            <ClusterProvider>
+              <SolanaProvider>
+                <UiLayout links={links}>{children}</UiLayout>
+              </SolanaProvider>
+            </ClusterProvider>
+          </ReactQueryProvider>
+        </div>
       </body>
     </html>
   );
