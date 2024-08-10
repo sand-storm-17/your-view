@@ -3,6 +3,14 @@ import { UiLayout } from '@/components/ui/ui-layout';
 import { ClusterProvider } from '@/components/cluster/cluster-data-access';
 import { SolanaProvider } from '@/components/solana/solana-provider';
 import { ReactQueryProvider } from './react-query-provider';
+import { Yusei_Magic } from 'next/font/google';
+
+const yusei = Yusei_Magic({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-yusei',
+});
 
 export const metadata = {
   title: 'views-app',
@@ -21,15 +29,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${yusei.variable}`}>
       <body>
-        <ReactQueryProvider>
-          <ClusterProvider>
-            <SolanaProvider>
-              <UiLayout links={links}>{children}</UiLayout>
-            </SolanaProvider>
-          </ClusterProvider>
-        </ReactQueryProvider>
+        <div>
+          <ReactQueryProvider>
+            <ClusterProvider>
+              <SolanaProvider>
+                <UiLayout links={links}>{children}</UiLayout>
+              </SolanaProvider>
+            </ClusterProvider>
+          </ReactQueryProvider>
+        </div>
       </body>
     </html>
   );
