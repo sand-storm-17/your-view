@@ -23,7 +23,6 @@ export const metadata = {
 const links: { label: string; path: string }[] = [
   { label: 'Account', path: '/account' },
   { label: 'Clusters', path: '/clusters' },
-  { label: 'Counter Program', path: '/counter' },
 ];
 
 export default function RootLayout({
@@ -34,7 +33,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${yusei.variable}`}>
       <body>
-        <div>
           <ReactQueryProvider>
             <ClusterProvider>
               <SolanaProvider>
@@ -42,7 +40,6 @@ export default function RootLayout({
               </SolanaProvider>
             </ClusterProvider>
           </ReactQueryProvider>
-        </div>
       </body>
     </html>
   );

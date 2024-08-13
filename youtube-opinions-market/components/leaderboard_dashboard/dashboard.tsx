@@ -1,4 +1,4 @@
-import CoinCard from "./coins-card";
+import {CoinCard} from "./coinCard";
 
 export default function Dashboard() {
   return (

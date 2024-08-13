@@ -149,6 +149,8 @@ export function ClusterUiModal({
 }
 
 export function ClusterUiTable() {
+  const {connection} = useConnection();
+  console.log(connection);
   const { clusters, setCluster, deleteCluster } = useCluster();
   return (
     <div className="overflow-x-auto">
