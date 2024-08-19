@@ -1,0 +1,593 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.6.1",
+  "deps": {
+    "@coral-xyz/anchor": "^0.30.0",
+    "@prisma/client": "^5.18.0",
+    "@solana-developers/preset-next": "3.0.1",
+    "@solana/spl-token": "0.4.6",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/web3.js": "1.91.9",
+    "@tabler/icons-react": "3.5.0",
+    "@tailwindcss/typography": "0.5.13",
+    "@tanstack/react-query": "5.40.0",
+    "@tanstack/react-query-next-experimental": "5.40.0",
+    "bs58": "5.0.0",
+    "buffer": "6.0.3",
+    "daisyui": "4.11.1",
+    "encoding": "0.1.13",
+    "jotai": "2.8.3",
+    "next": "14.0.4",
+    "prisma": "^5.18.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hot-toast": "2.4.1",
+    "react-icons": "^5.2.1",
+    "tslib": "^2.3.0",
+    "vercel": "^35.2.4",
+    "@nx/eslint": "19.0.0",
+    "@nx/eslint-plugin": "19.0.0",
+    "@nx/jest": "19.0.0",
+    "@nx/js": "19.0.0",
+    "@nx/next": "19.0.0",
+    "@nx/rollup": "19.0.0",
+    "@nx/workspace": "19.0.0",
+    "@swc-node/register": "~1.8.0",
+    "@swc/cli": "~0.3.12",
+    "@swc/core": "~1.3.85",
+    "@swc/helpers": "~0.5.2",
+    "@swc/jest": "0.2.20",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^22.4.1",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.3.0",
+    "@typescript-eslint/parser": "^7.3.0",
+    "autoprefixer": "10.4.13",
+    "eslint": "~8.57.0",
+    "eslint-config-next": "14.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "nx": "^19.0.0",
+    "postcss": "8.4.21",
+    "prettier": "^2.6.2",
+    "tailwindcss": "3.2.7",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.4.2"
+  },
+  "pathMappings": {
+    "@/*": [
+      "./youtube-opinions-market/*"
+    ],
+    "@views-app/anchor": [
+      "anchor/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".prettierignore",
+        "hash": "9319640766089167689"
+      },
+      {
+        "file": "README.md",
+        "hash": "5071735056987654872"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "7544409015863045561"
+      },
+      {
+        "file": "vercel.json",
+        "hash": "12397098123689201398"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "1678901522872654269"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "1604550750480784005"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "60901680939730831"
+      },
+      {
+        "file": "prisma/migrations/20240819151028_first/migration.sql",
+        "hash": "4409767676583421603"
+      },
+      {
+        "file": "prisma/migrations/migration_lock.toml",
+        "hash": "11493296588214560035"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": "prisma/script.ts",
+        "hash": "17647997154651336701"
+      },
+      {
+        "file": ".env",
+        "hash": "7828155865726974545"
+      },
+      {
+        "file": "package.json",
+        "hash": "11130246212885435143"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6820402234827505055"
+      },
+      {
+        "file": "error.log",
+        "hash": "17786951118782181494"
+      },
+      {
+        "file": "prisma/schema.prisma",
+        "hash": "1767063484832056656"
+      },
+      {
+        "file": "nx.json",
+        "hash": "4725497428161197334"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "11895339247949455606"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "9188201835120897554"
+      },
+      {
+        "file": "Dockerfile",
+        "hash": "14975055273772446543"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13984919104067521917"
+      }
+    ],
+    "projectFileMap": {
+      "anchor": [
+        {
+          "file": "anchor/.eslintrc.json",
+          "hash": "6986766963325221558"
+        },
+        {
+          "file": "anchor/.swcrc",
+          "hash": "2687333097325422833"
+        },
+        {
+          "file": "anchor/Anchor.toml",
+          "hash": "12220182838049032227"
+        },
+        {
+          "file": "anchor/Cargo.lock",
+          "hash": "743104059754248482"
+        },
+        {
+          "file": "anchor/Cargo.toml",
+          "hash": "2898960947178483227"
+        },
+        {
+          "file": "anchor/README.md",
+          "hash": "1782218905099124725"
+        },
+        {
+          "file": "anchor/jest.config.ts",
+          "hash": "2040708234021104497"
+        },
+        {
+          "file": "anchor/migrations/deploy.ts",
+          "hash": "11781380275406662601",
+          "deps": [
+            "npm:@coral-xyz/anchor"
+          ]
+        },
+        {
+          "file": "anchor/package.json",
+          "hash": "14639100442233431216"
+        },
+        {
+          "file": "anchor/programs/counter/Cargo.toml",
+          "hash": "14346489141776024555"
+        },
+        {
+          "file": "anchor/programs/counter/Xargo.toml",
+          "hash": "16727526384373378154"
+        },
+        {
+          "file": "anchor/programs/counter/src/lib.rs",
+          "hash": "3356606136251788381"
+        },
+        {
+          "file": "anchor/project.json",
+          "hash": "3186814880221043569"
+        },
+        {
+          "file": "anchor/src/counter-exports.ts",
+          "hash": "11981520707824847027",
+          "deps": [
+            "npm:@coral-xyz/anchor",
+            "npm:@solana/web3.js"
+          ]
+        },
+        {
+          "file": "anchor/src/index.ts",
+          "hash": "15320560388005573663"
+        },
+        {
+          "file": "anchor/target/idl/counter.json",
+          "hash": "8561967166965548425"
+        },
+        {
+          "file": "anchor/target/types/counter.ts",
+          "hash": "11774066317554438677"
+        },
+        {
+          "file": "anchor/tests/counter.spec.ts",
+          "hash": "2006795200564879348",
+          "deps": [
+            "npm:@coral-xyz/anchor",
+            "npm:@solana/web3.js"
+          ]
+        },
+        {
+          "file": "anchor/tsconfig.json",
+          "hash": "14749288870138018713"
+        },
+        {
+          "file": "anchor/tsconfig.lib.json",
+          "hash": "18369716569145454599"
+        },
+        {
+          "file": "anchor/tsconfig.spec.json",
+          "hash": "3357334332805928792"
+        }
+      ],
+      "youtube-opinions-market": [
+        {
+          "file": "youtube-opinions-market/.eslintrc.json",
+          "hash": "9414493116993895116"
+        },
+        {
+          "file": "youtube-opinions-market/app/account/[address]/page.tsx",
+          "hash": "14862423097494931654"
+        },
+        {
+          "file": "youtube-opinions-market/app/account/page.tsx",
+          "hash": "4825930355985352151"
+        },
+        {
+          "file": "youtube-opinions-market/app/api/hello/route.ts",
+          "hash": "12159998604013879547"
+        },
+        {
+          "file": "youtube-opinions-market/app/api/youtubers/route.ts",
+          "hash": "17688167875937929237",
+          "deps": [
+            "npm:next",
+            "npm:@prisma/client"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/app/clusters/page.tsx",
+          "hash": "1706717301622863130"
+        },
+        {
+          "file": "youtube-opinions-market/app/counter/page.tsx",
+          "hash": "3319980703786529863"
+        },
+        {
+          "file": "youtube-opinions-market/app/fonts/OFL.txt",
+          "hash": "11655241716534820946"
+        },
+        {
+          "file": "youtube-opinions-market/app/fonts/YuseiMagic-Regular.ttf",
+          "hash": "10292157058633595196"
+        },
+        {
+          "file": "youtube-opinions-market/app/global.css",
+          "hash": "7363907919570039799"
+        },
+        {
+          "file": "youtube-opinions-market/app/layout.tsx",
+          "hash": "5957591883341455495",
+          "deps": [
+            "npm:next"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/app/page.module.css",
+          "hash": "5708835840392938794"
+        },
+        {
+          "file": "youtube-opinions-market/app/page.tsx",
+          "hash": "14769726536006746631"
+        },
+        {
+          "file": "youtube-opinions-market/app/react-query-provider.tsx",
+          "hash": "5391848006794921453",
+          "deps": [
+            "npm:react",
+            "npm:@tanstack/react-query-next-experimental",
+            "npm:@tanstack/react-query"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/account/account-data-access.tsx",
+          "hash": "10577750919507381573",
+          "deps": [
+            "npm:@solana/wallet-adapter-react",
+            "npm:@solana/spl-token",
+            "npm:@solana/web3.js",
+            "npm:@tanstack/react-query",
+            "npm:react-hot-toast"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/account/account-detail-feature.tsx",
+          "hash": "9076707837254010013",
+          "deps": [
+            "npm:@solana/web3.js",
+            "npm:react",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/account/account-list-feature.tsx",
+          "hash": "10667833382761216822",
+          "deps": [
+            "npm:@solana/wallet-adapter-react",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/account/account-ui.tsx",
+          "hash": "16109751261898375881",
+          "deps": [
+            "npm:@solana/wallet-adapter-react",
+            "npm:@solana/web3.js",
+            "npm:@tabler/icons-react",
+            "npm:@tanstack/react-query",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/buySellCard/BuySell.tsx",
+          "hash": "4898934723894763126",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/cluster/cluster-data-access.tsx",
+          "hash": "12741932854054367747",
+          "deps": [
+            "npm:@solana/web3.js",
+            "npm:jotai",
+            "npm:react",
+            "npm:react-hot-toast"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/cluster/cluster-feature.tsx",
+          "hash": "3824313021136169306",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/cluster/cluster-ui.tsx",
+          "hash": "15707940803499658750",
+          "deps": [
+            "npm:@solana/wallet-adapter-react",
+            "npm:@tabler/icons-react",
+            "npm:@tanstack/react-query",
+            "npm:react",
+            "npm:@solana/web3.js"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/counter/counter-data-access.tsx",
+          "hash": "2399576894015355161",
+          "deps": [
+            "anchor"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/counter/counter-feature.tsx",
+          "hash": "12491336762465850368",
+          "deps": [
+            "npm:@solana/wallet-adapter-react"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/counter/counter-ui.tsx",
+          "hash": "8134337685898672804",
+          "deps": [
+            "npm:@solana/web3.js",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/dashboard/dashboard-feature.tsx",
+          "hash": "5462257877810416596"
+        },
+        {
+          "file": "youtube-opinions-market/components/leaderboard_dashboard/coinCard.tsx",
+          "hash": "3192748912983832031",
+          "deps": [
+            "npm:react-icons"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/leaderboard_dashboard/coins-card.tsx",
+          "hash": "11896834486859930767",
+          "deps": [
+            "npm:react",
+            "npm:react-icons"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/leaderboard_dashboard/dashboard.tsx",
+          "hash": "10697173850640709552"
+        },
+        {
+          "file": "youtube-opinions-market/components/leaderboard_dashboard/leaderboard-ui.tsx",
+          "hash": "5487496683456098403",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/leaderboard_dashboard/rank-card.tsx",
+          "hash": "11222436905525505046",
+          "deps": [
+            "npm:react-icons"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/leaderboard_dashboard/window.tsx",
+          "hash": "15334344551658004737",
+          "deps": [
+            "npm:react",
+            "npm:@solana/wallet-adapter-react"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/solana/buy.tsx",
+          "hash": "12404076499402136495",
+          "deps": [
+            "npm:react",
+            "npm:@solana/wallet-adapter-react",
+            "npm:bs58",
+            "npm:dotenv",
+            "npm:@solana/web3.js"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/solana/sell.tsx",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "youtube-opinions-market/components/solana/solana-provider.tsx",
+          "hash": "9574172696332976125",
+          "deps": [
+            "npm:next",
+            "npm:@coral-xyz/anchor",
+            "npm:@solana/wallet-adapter-base",
+            "npm:@solana/wallet-adapter-react",
+            "npm:@solana/wallet-adapter-react-ui",
+            "npm:react",
+            [
+              "npm:@solana/wallet-adapter-react-ui",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/token/new-coin.tsx",
+          "hash": "13708507137132241335",
+          "deps": [
+            "npm:react",
+            "npm:@solana/web3.js",
+            "npm:@solana/wallet-adapter-react",
+            "npm:@solana/spl-token"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/ui/ui-layout.tsx",
+          "hash": "2124069032627149977",
+          "deps": [
+            "npm:react",
+            "npm:next",
+            "npm:react-icons",
+            "npm:react-hot-toast"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/index.d.ts",
+          "hash": "17021007320214501298"
+        },
+        {
+          "file": "youtube-opinions-market/next-env.d.ts",
+          "hash": "650381615855576712"
+        },
+        {
+          "file": "youtube-opinions-market/next.config.js",
+          "hash": "1984683177166133876",
+          "deps": [
+            "npm:@nx/next"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/postcss.config.js",
+          "hash": "15486281244187232437"
+        },
+        {
+          "file": "youtube-opinions-market/project.json",
+          "hash": "172967964183040019"
+        },
+        {
+          "file": "youtube-opinions-market/public/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "youtube-opinions-market/public/favicon.ico",
+          "hash": "13871463210711627531"
+        },
+        {
+          "file": "youtube-opinions-market/public/logo.png",
+          "hash": "577251929812501589"
+        },
+        {
+          "file": "youtube-opinions-market/tailwind.config.js",
+          "hash": "11786237548573389750",
+          "deps": [
+            "npm:@nx/react",
+            "npm:daisyui"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/tsconfig.json",
+          "hash": "13629811208241720829"
+        },
+        {
+          "file": "youtube-opinions-market/components/token/createCoin.tsx",
+          "hash": "2769254742971274254"
+        },
+        {
+          "file": "youtube-opinions-market/app/sendsol/page.tsx",
+          "hash": "2367729429856902283",
+          "deps": [
+            "npm:@solana/wallet-adapter-base",
+            "npm:@solana/wallet-adapter-react",
+            "npm:@solana/web3.js",
+            "npm:react"
+          ]
+        }
+      ]
+    }
+  }
+}
