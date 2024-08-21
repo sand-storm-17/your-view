@@ -15,7 +15,6 @@ const wallet = useWallet();
 const {connection} = useConnection();
 
 export const sendTransaction = async () => {
-  'use server'
   if (wallet.publicKey == null) return null;
   const transaction = new Transaction().add(
     SystemProgram.transfer({
