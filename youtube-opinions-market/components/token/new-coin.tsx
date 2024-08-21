@@ -1,4 +1,7 @@
+'use client';
+
 import { useState, useEffect } from 'react';
+import { WalletContextState } from '@solana/wallet-adapter-react';
 import {
   Connection,
   Keypair,
@@ -7,11 +10,8 @@ import {
   SystemProgram,
   Transaction,
 } from '@solana/web3.js';
-import {
-  useConnection,
-  useWallet,
-  WalletContextState,
-} from '@solana/wallet-adapter-react';
+import { useConnection, useWallet } from '@solana/wallet-adapter-react';
+import { sendTransaction } from './sendTransaction';
 import {
   createInitializeMint2Instruction,
   createMint,
@@ -23,7 +23,6 @@ import {
   mintTo,
   TOKEN_PROGRAM_ID,
 } from '@solana/spl-token';
-
 const CreateNewCoin = async (
   name: FormDataEntryValue | null,
   value: FormDataEntryValue | null,
@@ -40,13 +39,11 @@ const CreateNewCoin = async (
     return;
   }
 
-  const airdropSignature = await connection.requestAirdrop(
-    payer,
-    LAMPORTS_PER_SOL
-  );
-
-  await connection.confirmTransaction(airdropSignature);
-
+  // const airdropSignature = await connection.requestAirdrop(
+  //   payer,
+  //   LAMPORTS_PER_SOL
+  // );
+  // await connection.confirmTransaction(airdropSignature);
   // const mint = await createMint(
   //   connection,
   //   payer,
@@ -54,7 +51,6 @@ const CreateNewCoin = async (
   //   freezeAuthority.publicKey,
   //   9 // We are using 9 to match the CLI decimal default exactly
   // );
-
   // payer: Signer;
   const decimals = 9;
   const keypair = Keypair.generate();
@@ -80,27 +76,20 @@ const CreateNewCoin = async (
 
   const signature = await wallet.sendTransaction(transaction, connection);
 
-  await connection.confirmTransaction(signature, 'processed');
+  const latestBlockHash = await connection.getLatestBlockhash();
 
-  return keypair.publicKey;
-};
-
-const sendTransaction = async (
-  wallet: WalletContextState,
-  connection: Connection
-) => {
-  if (wallet.publicKey == null) return null;
-  const transaction = new Transaction().add(
-    SystemProgram.transfer({
-      fromPubkey: wallet.publicKey,
-      toPubkey: Keypair.generate().publicKey,
-      lamports: 1_000_000,
-    })
+  const confirmation = await connection.confirmTransaction(
+    {
+      blockhash: latestBlockHash.blockhash,
+      lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+      signature: signature,
+    },
+    'confirmed'
   );
 
-  const signature = await wallet.sendTransaction(transaction, connection);
+  console.log(confirmation);
 
-  return await connection.confirmTransaction(signature, 'processed');
+  return keypair.publicKey;
 };
 
 //   console.log(mint.toBase58());
@@ -151,9 +140,9 @@ export default function NewCoin() {
     setShowModal(!showModal);
   }
   const { connection } = useConnection();
-  console.log(connection);
+  // console.log(connection);
   const wallet = useWallet();
-  console.log(wallet);
+  // console.log(wallet);
   async function onSubmitHandler(e: FormData) {
     const name = e.get('name');
     const value = e.get('value');
@@ -161,28 +150,21 @@ export default function NewCoin() {
     const baseValue = e.get('value');
     const mint = await CreateNewCoin(name, value, email, connection, wallet);
   }
-  async function sendTransaction() {
-    if (wallet.publicKey == null) return null;
-    const transaction = new Transaction().add(
-      SystemProgram.transfer({
-        fromPubkey: wallet.publicKey,
-        toPubkey: Keypair.generate().publicKey,
-        lamports: 1_000_000,
-      })
-    );
 
-      console.log(transaction,connection);
-      const signature = await wallet.sendTransaction(transaction, connection);
-      await connection.confirmTransaction(signature, 'processed');
-    
+  function sendTransactionHandler() {
+    const response = fetch('');
   }
+
   return (
-    <div className="absolute">
+    <div className="absolute flex">
       <button
         onClick={changeShowModal}
         className="flex border-1 border-white p-2 primary-800 font-heading1 bg-background-50 rounded-3xl m-2"
       >
         Want to create you own Coin?
+      </button>
+      <button className="bg-black" onClick={()=>{}}>
+        Send 1 Sol
       </button>
       {showModal ? (
         <div className="absolute flex items-start bg-transparent h-1/2 w-1/4 rounded-2xl">

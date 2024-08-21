@@ -61,7 +61,9 @@
     "tailwindcss": "3.2.7",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "~5.4.2"
+    "typescript": "~5.4.2",
+    "vite": "^5.4.1",
+    "vite-plugin-node-polyfills": "^0.22.0"
   },
   "pathMappings": {
     "@/*": [
@@ -75,80 +77,16 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".prettierignore",
-        "hash": "9319640766089167689"
-      },
-      {
-        "file": "README.md",
-        "hash": "5071735056987654872"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "7544409015863045561"
-      },
-      {
-        "file": "vercel.json",
-        "hash": "12397098123689201398"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "1678901522872654269"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "1604550750480784005"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "60901680939730831"
+        "file": "Dockerfile",
+        "hash": "14039782053931766566"
       },
       {
         "file": "prisma/migrations/20240819151028_first/migration.sql",
         "hash": "4409767676583421603"
       },
       {
-        "file": "prisma/migrations/migration_lock.toml",
-        "hash": "11493296588214560035"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
-      },
-      {
-        "file": "prisma/script.ts",
-        "hash": "17647997154651336701"
-      },
-      {
-        "file": ".env",
-        "hash": "7828155865726974545"
-      },
-      {
         "file": "package.json",
-        "hash": "11130246212885435143"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "6820402234827505055"
-      },
-      {
-        "file": "error.log",
-        "hash": "17786951118782181494"
-      },
-      {
-        "file": "prisma/schema.prisma",
-        "hash": "1767063484832056656"
-      },
-      {
-        "file": "nx.json",
-        "hash": "4725497428161197334"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": "yarn.lock",
-        "hash": "11895339247949455606"
+        "hash": "12345306401761560985"
       },
       {
         "file": ".eslintignore",
@@ -159,112 +97,79 @@
         "hash": "9188201835120897554"
       },
       {
-        "file": "Dockerfile",
-        "hash": "14975055273772446543"
+        "file": "vercel.json",
+        "hash": "12397098123689201398"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
       },
       {
         "file": ".gitignore",
         "hash": "13984919104067521917"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "7544409015863045561"
+      },
+      {
+        "file": "prisma/script.ts",
+        "hash": "17647997154651336701"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "17667784257208695249"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": ".env",
+        "hash": "7828155865726974545"
+      },
+      {
+        "file": "prisma/migrations/migration_lock.toml",
+        "hash": "11493296588214560035"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6820402234827505055"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "1604550750480784005"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "60901680939730831"
+      },
+      {
+        "file": "README.md",
+        "hash": "5071735056987654872"
+      },
+      {
+        "file": "prisma/schema.prisma",
+        "hash": "1767063484832056656"
+      },
+      {
+        "file": "error.log",
+        "hash": "17786951118782181494"
+      },
+      {
+        "file": "nx.json",
+        "hash": "4725497428161197334"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "1678901522872654269"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "9319640766089167689"
       }
     ],
     "projectFileMap": {
-      "anchor": [
-        {
-          "file": "anchor/.eslintrc.json",
-          "hash": "6986766963325221558"
-        },
-        {
-          "file": "anchor/.swcrc",
-          "hash": "2687333097325422833"
-        },
-        {
-          "file": "anchor/Anchor.toml",
-          "hash": "12220182838049032227"
-        },
-        {
-          "file": "anchor/Cargo.lock",
-          "hash": "743104059754248482"
-        },
-        {
-          "file": "anchor/Cargo.toml",
-          "hash": "2898960947178483227"
-        },
-        {
-          "file": "anchor/README.md",
-          "hash": "1782218905099124725"
-        },
-        {
-          "file": "anchor/jest.config.ts",
-          "hash": "2040708234021104497"
-        },
-        {
-          "file": "anchor/migrations/deploy.ts",
-          "hash": "11781380275406662601",
-          "deps": [
-            "npm:@coral-xyz/anchor"
-          ]
-        },
-        {
-          "file": "anchor/package.json",
-          "hash": "14639100442233431216"
-        },
-        {
-          "file": "anchor/programs/counter/Cargo.toml",
-          "hash": "14346489141776024555"
-        },
-        {
-          "file": "anchor/programs/counter/Xargo.toml",
-          "hash": "16727526384373378154"
-        },
-        {
-          "file": "anchor/programs/counter/src/lib.rs",
-          "hash": "3356606136251788381"
-        },
-        {
-          "file": "anchor/project.json",
-          "hash": "3186814880221043569"
-        },
-        {
-          "file": "anchor/src/counter-exports.ts",
-          "hash": "11981520707824847027",
-          "deps": [
-            "npm:@coral-xyz/anchor",
-            "npm:@solana/web3.js"
-          ]
-        },
-        {
-          "file": "anchor/src/index.ts",
-          "hash": "15320560388005573663"
-        },
-        {
-          "file": "anchor/target/idl/counter.json",
-          "hash": "8561967166965548425"
-        },
-        {
-          "file": "anchor/target/types/counter.ts",
-          "hash": "11774066317554438677"
-        },
-        {
-          "file": "anchor/tests/counter.spec.ts",
-          "hash": "2006795200564879348",
-          "deps": [
-            "npm:@coral-xyz/anchor",
-            "npm:@solana/web3.js"
-          ]
-        },
-        {
-          "file": "anchor/tsconfig.json",
-          "hash": "14749288870138018713"
-        },
-        {
-          "file": "anchor/tsconfig.lib.json",
-          "hash": "18369716569145454599"
-        },
-        {
-          "file": "anchor/tsconfig.spec.json",
-          "hash": "3357334332805928792"
-        }
-      ],
       "youtube-opinions-market": [
         {
           "file": "youtube-opinions-market/.eslintrc.json",
@@ -279,12 +184,20 @@
           "hash": "4825930355985352151"
         },
         {
+          "file": "youtube-opinions-market/app/api/balance.ts",
+          "hash": "1500152957490860111",
+          "deps": [
+            "npm:@solana/web3.js",
+            "npm:next"
+          ]
+        },
+        {
           "file": "youtube-opinions-market/app/api/hello/route.ts",
-          "hash": "12159998604013879547"
+          "hash": "10609516589069715399"
         },
         {
           "file": "youtube-opinions-market/app/api/youtubers/route.ts",
-          "hash": "17688167875937929237",
+          "hash": "14179496056442104642",
           "deps": [
             "npm:next",
             "npm:@prisma/client"
@@ -323,7 +236,7 @@
         },
         {
           "file": "youtube-opinions-market/app/page.tsx",
-          "hash": "14769726536006746631"
+          "hash": "12295255217591739280"
         },
         {
           "file": "youtube-opinions-market/app/react-query-provider.tsx",
@@ -332,6 +245,16 @@
             "npm:react",
             "npm:@tanstack/react-query-next-experimental",
             "npm:@tanstack/react-query"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/app/sendsol/page.tsx",
+          "hash": "2618751120590188015",
+          "deps": [
+            "npm:@solana/wallet-adapter-base",
+            "npm:@solana/wallet-adapter-react",
+            "npm:@solana/web3.js",
+            "npm:react"
           ]
         },
         {
@@ -492,7 +415,7 @@
         },
         {
           "file": "youtube-opinions-market/components/solana/solana-provider.tsx",
-          "hash": "9574172696332976125",
+          "hash": "10450632109668273861",
           "deps": [
             "npm:next",
             "npm:@coral-xyz/anchor",
@@ -507,13 +430,34 @@
           ]
         },
         {
+          "file": "youtube-opinions-market/components/token/CreateNewCoin.tsx",
+          "hash": "7010324997009096430",
+          "deps": [
+            "npm:@solana/spl-token",
+            "npm:@solana/wallet-adapter-react",
+            "npm:@solana/web3.js"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/token/createCoin.tsx",
+          "hash": "2769254742971274254"
+        },
+        {
           "file": "youtube-opinions-market/components/token/new-coin.tsx",
-          "hash": "13708507137132241335",
+          "hash": "16848240908603406330",
           "deps": [
             "npm:react",
-            "npm:@solana/web3.js",
             "npm:@solana/wallet-adapter-react",
+            "npm:@solana/web3.js",
             "npm:@solana/spl-token"
+          ]
+        },
+        {
+          "file": "youtube-opinions-market/components/token/sendTransaction.tsx",
+          "hash": "8273524750336252253",
+          "deps": [
+            "npm:@solana/wallet-adapter-react",
+            "npm:@solana/web3.js"
           ]
         },
         {
@@ -571,21 +515,108 @@
         },
         {
           "file": "youtube-opinions-market/tsconfig.json",
-          "hash": "13629811208241720829"
+          "hash": "4017683189247165492"
         },
         {
-          "file": "youtube-opinions-market/components/token/createCoin.tsx",
-          "hash": "2769254742971274254"
+          "file": "youtube-opinions-market/components/token/getAirdrop.ts",
+          "hash": "9185515166842077170"
+        }
+      ],
+      "anchor": [
+        {
+          "file": "anchor/.eslintrc.json",
+          "hash": "6986766963325221558"
         },
         {
-          "file": "youtube-opinions-market/app/sendsol/page.tsx",
-          "hash": "2367729429856902283",
+          "file": "anchor/.swcrc",
+          "hash": "2687333097325422833"
+        },
+        {
+          "file": "anchor/Anchor.toml",
+          "hash": "12220182838049032227"
+        },
+        {
+          "file": "anchor/Cargo.lock",
+          "hash": "743104059754248482"
+        },
+        {
+          "file": "anchor/Cargo.toml",
+          "hash": "2898960947178483227"
+        },
+        {
+          "file": "anchor/README.md",
+          "hash": "1782218905099124725"
+        },
+        {
+          "file": "anchor/jest.config.ts",
+          "hash": "2040708234021104497"
+        },
+        {
+          "file": "anchor/migrations/deploy.ts",
+          "hash": "11781380275406662601",
           "deps": [
-            "npm:@solana/wallet-adapter-base",
-            "npm:@solana/wallet-adapter-react",
-            "npm:@solana/web3.js",
-            "npm:react"
+            "npm:@coral-xyz/anchor"
           ]
+        },
+        {
+          "file": "anchor/package.json",
+          "hash": "14639100442233431216"
+        },
+        {
+          "file": "anchor/programs/counter/Cargo.toml",
+          "hash": "14346489141776024555"
+        },
+        {
+          "file": "anchor/programs/counter/Xargo.toml",
+          "hash": "16727526384373378154"
+        },
+        {
+          "file": "anchor/programs/counter/src/lib.rs",
+          "hash": "3356606136251788381"
+        },
+        {
+          "file": "anchor/project.json",
+          "hash": "3186814880221043569"
+        },
+        {
+          "file": "anchor/src/counter-exports.ts",
+          "hash": "11981520707824847027",
+          "deps": [
+            "npm:@coral-xyz/anchor",
+            "npm:@solana/web3.js"
+          ]
+        },
+        {
+          "file": "anchor/src/index.ts",
+          "hash": "15320560388005573663"
+        },
+        {
+          "file": "anchor/target/idl/counter.json",
+          "hash": "8561967166965548425"
+        },
+        {
+          "file": "anchor/target/types/counter.ts",
+          "hash": "11774066317554438677"
+        },
+        {
+          "file": "anchor/tests/counter.spec.ts",
+          "hash": "2006795200564879348",
+          "deps": [
+            "npm:@coral-xyz/anchor",
+            "npm:@solana/web3.js"
+          ]
+        },
+        {
+          "file": "anchor/tsconfig.json",
+          "hash": "14749288870138018713"
+        },
+        {
+          "file": "anchor/tsconfig.lib.json",
+          "hash": "18369716569145454599"
+        },
+        {
+          "file": "anchor/tsconfig.spec.json",
+          "hash": "3357334332805928792"
         }
       ]
     }
