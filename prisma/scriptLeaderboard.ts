@@ -5,16 +5,16 @@ async function main() {
 
     const youtuber = await prisma.youTuber.create({
         data: {
-            channelName: "pewdiepie",
+            channelName: "any",
             rank:1,
-            subscriberCount: 110000,
+            subscriberCount: 2100000,
         }
     });
 
 
-    const coin = await prisma.coin.create({
+    const mintedCoin = await prisma.youtuberCoin.create({
         data: {
-            coinName: "pew",
+            coinName: "any",
             numberOfCoinsMinted: 1000,
             valueOfCoin: 1.0,
             minterId: youtuber.id
@@ -23,11 +23,11 @@ async function main() {
 
 
     console.log('YouTuber created:', youtuber);
-    console.log('Coin created:', coin);
+    console.log('Coin minted:', mintedCoin);
 
     const youtuberWithCoins = await prisma.youTuber.findUnique({
         where: { id: youtuber.id },
-        include: { coins: true }
+        include: { coinsMinted: true }
     });
 
     console.log('YouTuber with coins:', youtuberWithCoins);

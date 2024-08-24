@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "run-script-leaderboard": "ts-node prisma/scriptLeaderboard.ts",
+    "run-script-user": "ts-node prisma/scriptUser.ts",
     "anchor": "nx run anchor:anchor",
     "anchor-build": "nx run anchor:anchor build",
     "anchor-localnet": "nx run anchor:anchor localnet",

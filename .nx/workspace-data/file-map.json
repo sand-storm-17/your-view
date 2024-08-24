@@ -77,96 +77,108 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".eslintrc.json",
-        "hash": "9188201835120897554"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "6820402234827505055"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
-      },
-      {
-        "file": "prisma/schema.prisma",
-        "hash": "1767063484832056656"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "13984919104067521917"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "9319640766089167689"
-      },
-      {
-        "file": ".env",
-        "hash": "7828155865726974545"
-      },
-      {
-        "file": "prisma/migrations/20240819151028_first/migration.sql",
-        "hash": "4409767676583421603"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "1604550750480784005"
-      },
-      {
-        "file": "Dockerfile",
-        "hash": "14039782053931766566"
-      },
-      {
         "file": "prisma/migrations/migration_lock.toml",
         "hash": "11493296588214560035"
       },
       {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": "yarn.lock",
-        "hash": "17667784257208695249"
-      },
-      {
-        "file": "README.md",
-        "hash": "5071735056987654872"
-      },
-      {
-        "file": "prisma/script.ts",
-        "hash": "17647997154651336701"
+        "file": "prisma/migrations/20240819151028_first/migration.sql",
+        "hash": "6647924084034125014"
       },
       {
         "file": "vercel.json",
         "hash": "12397098123689201398"
       },
       {
-        "file": "jest.config.ts",
-        "hash": "7544409015863045561"
+        "file": "prisma/scriptUser.ts",
+        "hash": "10887520750272217864"
+      },
+      {
+        "file": "Dockerfile",
+        "hash": "14039782053931766566"
+      },
+      {
+        "file": "package.json",
+        "hash": "16344750163140124777"
       },
       {
         "file": ".eslintignore",
         "hash": "13404745306227114823"
       },
       {
-        "file": ".vscode/extensions.json",
-        "hash": "60901680939730831"
+        "file": "prisma/scriptLeaderboard.ts",
+        "hash": "3993502404374553752"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "1678901522872654269"
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
       },
       {
-        "file": "package.json",
-        "hash": "12345306401761560985"
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13984919104067521917"
+      },
+      {
+        "file": "prisma/migrations/20240824065601_made_user_model_and_few_other_changes_to_schema/migration.sql",
+        "hash": "13325228028141305423"
+      },
+      {
+        "file": "prisma/migrations/20240824080108_separate_coin_tables/migration.sql",
+        "hash": "2166031881294298884"
+      },
+      {
+        "file": "prisma/schema.prisma",
+        "hash": "265565426159700981"
       },
       {
         "file": "error.log",
         "hash": "17786951118782181494"
       },
       {
+        "file": "LICENSE",
+        "hash": "1604550750480784005"
+      },
+      {
         "file": "nx.json",
         "hash": "4725497428161197334"
+      },
+      {
+        "file": ".env",
+        "hash": "14589139506510107112"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "1678901522872654269"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "17667784257208695249"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "7544409015863045561"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "9188201835120897554"
+      },
+      {
+        "file": "README.md",
+        "hash": "5071735056987654872"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "60901680939730831"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6820402234827505055"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "9319640766089167689"
       }
     ],
     "projectFileMap": {
@@ -190,10 +202,6 @@
             "npm:@solana/web3.js",
             "npm:next"
           ]
-        },
-        {
-          "file": "youtube-opinions-market/app/api/hello/route.ts",
-          "hash": "10609516589069715399"
         },
         {
           "file": "youtube-opinions-market/app/api/youtubers/route.ts",
@@ -248,7 +256,7 @@
           ]
         },
         {
-          "file": "youtube-opinions-market/app/sendsol/page.tsx",
+          "file": "youtube-opinions-market/app/sendSol/page.tsx",
           "hash": "2618751120590188015",
           "deps": [
             "npm:@solana/wallet-adapter-base",
@@ -359,22 +367,17 @@
         },
         {
           "file": "youtube-opinions-market/components/leaderboard_dashboard/coinCard.tsx",
-          "hash": "3192748912983832031",
+          "hash": "4995998658663308245",
           "deps": [
-            "npm:react-icons"
-          ]
-        },
-        {
-          "file": "youtube-opinions-market/components/leaderboard_dashboard/coins-card.tsx",
-          "hash": "11896834486859930767",
-          "deps": [
-            "npm:react",
             "npm:react-icons"
           ]
         },
         {
           "file": "youtube-opinions-market/components/leaderboard_dashboard/dashboard.tsx",
-          "hash": "10697173850640709552"
+          "hash": "17576356943934719701",
+          "deps": [
+            "npm:react"
+          ]
         },
         {
           "file": "youtube-opinions-market/components/leaderboard_dashboard/leaderboard-ui.tsx",
@@ -441,6 +444,10 @@
         {
           "file": "youtube-opinions-market/components/token/createCoin.tsx",
           "hash": "2769254742971274254"
+        },
+        {
+          "file": "youtube-opinions-market/components/token/getAirdrop.ts",
+          "hash": "9185515166842077170"
         },
         {
           "file": "youtube-opinions-market/components/token/new-coin.tsx",
@@ -518,8 +525,12 @@
           "hash": "4017683189247165492"
         },
         {
-          "file": "youtube-opinions-market/components/token/getAirdrop.ts",
-          "hash": "9185515166842077170"
+          "file": "youtube-opinions-market/app/api/users/route.ts",
+          "hash": "15891738645270934937",
+          "deps": [
+            "npm:next",
+            "npm:@prisma/client"
+          ]
         }
       ],
       "anchor": [
